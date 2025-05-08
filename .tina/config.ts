@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
-import schema from ".tina/schema"
+import schema from "./schema";
+import { client } from './__generated__/client'
 // Your tina config
 // ==============
 const branch = 'main';
