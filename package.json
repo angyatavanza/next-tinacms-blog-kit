@@ -3,9 +3,9 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build && next build",
-    "start": "tinacms build && next start",
+    "dev": "NODE_ENV=development tinacms server:start -c \"next dev\" --experimentalData",
+    "build": "tinacms server:start -c \"next build\" --experimentalData",
+    "start": "tinacms server:start -c \"next start\" --experimentalData",
     "lint": "next lint",
     "typecheck": "tsc",
     "healthcheck": "npm run lint && npm run typecheck",
@@ -35,7 +35,7 @@
     "tinacms": "^0.69.4"
   },
   "devDependencies": {
-    "@types/node": "18.7.14",
+    "@types/node": "^18.19.98",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
